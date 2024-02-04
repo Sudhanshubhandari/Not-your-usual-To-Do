@@ -4,8 +4,8 @@ import cron from "node-cron"
 import twilio from 'twilio';
 // import task from '../../models/task';
 
-const accountSid = 'AC043c005e4d89c23a8e5e5f59bb5193a8';
-const authToken = 'f921d252f8c8fda46e552963f991ac51';
+const accountSid = process.env.ACCOUNT_SID;
+const authToken = process.env.AUTH_TOKEN;
 
 const client = twilio(accountSid, authToken);
 const fromPhoneNumber = '+14154841517';
